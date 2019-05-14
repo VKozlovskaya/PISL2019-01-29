@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>AngularJS</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+
+      <script th:src="@{/main.js}"></script>
+      <link th:href="@{/main.css}" rel="stylesheet" />
+
+      <head>
+   <body ng-app="EmployeeManagement" ng-controller="EmployeeController">
+   <header>Persons Service</header>
+   	<div class="container">
+   			<div class="content-wrap">
+
+
+      <br/>
+      <a class="create-button" ng-click="createEmployee()" href = "#openModal">Create Employee</a>
+      <table border="1">
+         <tr>
+            <th>login</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>ThirdName</th>
+            <th>Edit</th>
+            <th>Delete</th>
+         </tr>
+
+         <tr ng-repeat="employee in employees">
+            <td> {{ employee.login }} </td>
+            <td> {{ employee.lastName }} </td>
+            <td>{{ employee.firstName }} </td>
+            <td>{{ employee.thirdName }} </td>
+            <td>
+            <a ng-click="editEmployee(employee)" class="edit-button" href = "#openModal">Edit</a>
+            </td>
+            <td>
+            <a ng-click="deleteEmployee(employee)" class="delete-button">Delete</a>
+            </td>
+         </tr>
+      </table>
+      </div>
+
+      				<div id="openModal" class="modalDialog">
+      					<div>
+      						<a href="#close" title="Закрыть" class="close">X</a>
+      						<form ng-submit="submitEmployee()">
+                                     <table border="0">
+                                        <tr>
+                                           <td>login</td>
+                                           <td>{{employeeForm.login}}</td>
+                                        </tr>
+                                        <tr>
+                                                       <td>lastName</td>
+                                                       <td><input type="text" ng-model="employeeForm.lastName"  /></td>
+                                                    </tr>
+                                        <tr>
+                                           <td>firstName</td>
+                                           <td><input type="text" ng-model="employeeForm.firstName" /></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>thirdName</td>
+                                            <td><input type="text" ng-model="employeeForm.thirdName"  /></td>
+                                        </tr>
+                                           <tr>
+                                                 <td>seria</td>
+                                                 <td><input type="text" ng-model="employeeForm.passport.seria"  /></td>
+                                           </tr>
+                                <tr>
+                                                <td>number</td>
+                                                <td><input type="text" ng-model="employeeForm.passport.number"  /></td>
+                                            </tr>
+                                            <tr>
+                                                            <td>idNumber</td>
+                                                            <td><input type="text" ng-model="employeeForm.passport.idNumber"  /></td>
+                                                        </tr>
+                                          <tr>
+                                                          <td>birthdate</td>
+                                                          <td><input type="text" ng-model="employeeForm.birthDate"  /></td>
+                                                      </tr>
+
+                                                      <tr>
+                                                                      <td>gender</td>
+                                                                      <td><input type="text" ng-model="employeeForm.gender"  /></td>
+                                                                  </tr>
+                                           <tr>
+                                               <td>releaseCity</td>
+                                               <td><input type="text" ng-model="employeeForm.address.releaseCity"  /></td>
+                                           </tr>
+                                           <tr>
+                                                          <td>releaseAddress</td>
+                                                          <td><input type="text" ng-model="employeeForm.address.releaseAddress"  /></td>
+                                                       </tr>
+                                           <tr>
+                                                          <td>actualCity</td>
+                                                          <td><input type="text" ng-model="employeeForm.address.actualCity"  /></td>
+                                                       </tr>
+                                                       <tr>
+                                                                      <td>actualAddress</td>
+                                                                      <td><input type="text" ng-model="employeeForm.address.actualAddress"  /></td>
+                                                                   </tr>
+
+                                                        <tr>
+                                                                       <td>nation</td>
+                                                                       <td><input type="text" ng-model="employeeForm.nation"  /></td>
+                                                                    </tr>
+
+
+                                                       <tr>
+                                                                      <td>phone</td>
+                                                                      <td><input type="text" ng-model="employeeForm.phone"  /></td>
+                                                                   </tr>
+                                                        <tr>
+                                                                       <td>homePhone</td>
+                                                                       <td><input type="text" ng-model="employeeForm.homePhone"  /></td>
+                                                                    </tr>
+                                        <tr>
+                                           <td colspan="2">
+                                              <input type="submit" value="Submit" class="blue-button" />
+                                           </td>
+                                        </tr>
+                                     </table>
+                                  </form>
+      					</div>
+      				</div>
+      			<aside>
+      				<h3 class = "font">Помните!</h3>
+      				<p class = "font">Лучшие душевные движения не значат ничего, если не приводят к добрым действиям. </p>
+      				<p class = "font">Когда будешь делать кому-нибудь добро, заметь, что во время свершения доброго дела получишь таков же удовольствие, какое получит и тот человек. </p>
+      				<p class = "font">Человек должен любить людей. Если он людей будет любить, то ему будет жить лучше, веселее будет жить, ибо никто не живет так худо в мире как, мизантроп  человеконенавистник.</p>
+      			</aside>
+      	</div>
+      	<footer>Подготовила vero4ka_lapo4ka</footer>
+      </div>
+
+   </body>
+</html>

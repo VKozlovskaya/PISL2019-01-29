@@ -1,0 +1,147 @@
+table  {
+    border-collapse: collapse;
+}
+
+table td, th  {
+    padding: 5px;
+}
+
+.create-button  {
+    color: blue;
+    cursor: pointer;
+    padding: 5px;
+}
+.edit-button  {
+    padding: 2px 5px;
+    background: #25A6E1;
+    cursor: pointer;
+}
+
+.delete-button  {
+    padding: 2px 5px;
+    background: #CD5C5C;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    background: #F0F0F0;
+    font-family: cambria;
+    color: #240152;
+    min-height: 700px;
+    min-width: 900px;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    min-height: 700px;
+}
+header {
+    font-family: Mistral;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background:#FFA07A;
+    color: white;
+}
+
+nav {
+    flex: 0.5;
+    background: #FFEFD5	;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+aside {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #FFEFD5;
+
+}
+footer {
+    padding: 20px;
+    background: 	#FFEFD5;
+    text-align: center;
+}
+.content-wrap {
+    background: url("dobro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    flex: 4;
+    overflow: scroll;
+    width: calc(100% - 300px);
+    margin-right: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+option {
+    font-size: 18px;
+}
+textarea {
+    font-size: 18px;
+}
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    display: none;
+}
+.modalDialog:target {
+    display: block;
+}
+
+.modalDialog > div {
+    overflow: scroll;
+    width: 60%;
+    position: relative;
+    margin: 2% auto -5% auto;
+    max-height: 900px;
+    padding: 5px 20px 13px 20px;
+    background: url("dobro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 2px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+.button {
+    background: #F08080;
+    border-style: ridge;
+    border-radius: 10px;
+    width: 170px;
+    padding: 10px 2px 10px 2px;
+    cursor: pointer;
+}
+table, th, td, tr {
+    border: 1px solid #802600;
+}
+.font {
+    font-family: 'Righteous', cursive;
+}
